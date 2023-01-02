@@ -3,7 +3,7 @@ let spinner = `<div class="lds-spinner"><div></div><div></div><div></div><div></
 
 const generateQuote = async () => {
     blockquote.innerHTML = spinner;
-    let data = await fetch('https://rohsikdnan.github.io/quote-generator/quotes.json');
+    let data = await fetch('/quotes.json');
     let quotes = await data.json();
 
     let i = Math.floor(Math.random() * quotes.length);
