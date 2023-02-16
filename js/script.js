@@ -8,10 +8,10 @@ const generateQuote = () => {
     fetch("../quotes.json")
     .then(res=>res.json())
     .then(data=>{
-        setTimeout(() => {
+        // setTimeout(() => {
             let i = Math.floor(Math.random() * data.length);
             blockquote.innerHTML = `<p>${data[i].quote}</p><span class="blockquote-footer">${data[i].author}</span>`;
-        }, 500);
+        // }, 500);
     })
     // setTimeout(() => {
     //     let i = Math.floor(Math.random() * quotes.length);
