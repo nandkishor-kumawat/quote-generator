@@ -5,7 +5,7 @@ const generateQuote = () => {
     blockquote.innerHTML = spinner;
     // let data = await fetch('https://rohsikdnan.github.io/quote-generator/quotes.json');
     // let quotes = await data.json();
-    fetch("../quotes.json")
+    fetch("quotes.json")
     .then(res=>res.json())
     .then(data=>{
         // setTimeout(() => {
