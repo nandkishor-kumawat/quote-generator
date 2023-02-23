@@ -18,7 +18,7 @@ generateQuote();
 // const generateQuote = () => {
 //     blockquote.innerHTML = spinner;
 //     let xhr = new XMLHttpRequest();
-//     xhr.open('GET', './js/quotes.json', true);
+//     xhr.open('GET', 'quotes.json', true);
 //     xhr.responseType = 'json';
 //     xhr.send();
 
