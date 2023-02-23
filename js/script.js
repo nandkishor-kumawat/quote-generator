@@ -18,7 +18,7 @@ let spinner = `<div class="lds-spinner"><div></div><div></div><div></div><div></
 const generateQuote = () => {
     blockquote.innerHTML = spinner;
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', './quotes.json', true);
+    xhr.open('GET', '../quotes.json', true);
     xhr.responseType = 'json';
     xhr.send();
 
