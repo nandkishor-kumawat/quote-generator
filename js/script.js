@@ -8,7 +8,7 @@ const generateQuote = () => {
     setTimeout(() => {
         let i = Math.floor(Math.random() * quotes.length);
         blockquote.innerHTML = `<p>${quotes[i].quote}</p><span class="blockquote-footer">${quotes[i].author}</span>`;
-    }, 500);
+    }, 200);
 }
 
 document.getElementById('generateBtn').addEventListener('click', generateQuote);
