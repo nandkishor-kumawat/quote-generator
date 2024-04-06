@@ -1,12 +1,14 @@
 let blockquote = document.querySelector(".blockquote");
 let spinner = `<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`;
 
-const generateQuote = () => {
+const generateQuote = async () => {
     blockquote.innerHTML = spinner;
-    setTimeout(() => {
-        let i = Math.floor(Math.random() * quotes.length);
-        blockquote.innerHTML = `<p>${quotes[i].quote}</p><span class="blockquote-footer">${quotes[i].author}</span>`;
-    }, 400);
+    try {
+        const quote = await fetch('https://rohsikdnan.vercel.app/api/v1/quotes/random').then(res => res.json());
+        blockquote.innerHTML = `<p>${quote.quote}</p><span class="blockquote-footer">${quote.author}</span>`;
+    } catch (error) {
+        blockquote.innerHTML = '<p style="color: red;">Something went wrong. Please try again later.</p>';
+    }
 }
 
 document.getElementById('generateBtn').addEventListener('click', generateQuote);
